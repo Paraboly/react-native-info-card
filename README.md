@@ -12,7 +12,7 @@
 
 <p align="center">
   <img alt="React Native Library Boilerplate"
-        src="assets/Screenshots/JSLibraryBoilerplate.png" />
+        src="assets/Screenshots/screenshotIos.png" />
 </p>
 
 # Installation
