@@ -1,11 +1,8 @@
 <img alt="React Native Library Boilerplate" src="assets/logo.png" width="1050"/>
 
-
 [![Battle Tested ✅](https://img.shields.io/badge/-Battle--Tested%20%E2%9C%85-03666e?style=for-the-badge)](https://github.com/WrathChaos/react-native-library-boilerplate)
 
-
 [![React Native Library Boiler Plate](https://img.shields.io/badge/-React%20Native%20Library%20Boilerplate-lightgrey?style=for-the-badge)](https://github.com/WrathChaos/react-native-library-boilerplate)
-
 
 [![npm version](https://img.shields.io/npm/v/react-native-library-boilerplate.svg?style=for-the-badge)](https://www.npmjs.com/package/react-native-library-boilerplate)
 [![npm](https://img.shields.io/npm/dt/react-native-library-boilerplate.svg?style=for-the-badge)](https://www.npmjs.com/package/react-native-library-boilerplate)
@@ -23,7 +20,7 @@
 Add the dependency:
 
 ```ruby
-npm i react-native-library-boilerplate
+npm i @paraboly/react-native-info-card
 ```
 
 ## Peer Dependencies
@@ -33,6 +30,7 @@ npm i react-native-library-boilerplate
 ```js
 "react": ">= 16.x.x",
 "react-native": ">= 0.55.x",
+"react-native-androw": ">= 0.0.34",
 ```
 
 # Usage
@@ -40,23 +38,14 @@ npm i react-native-library-boilerplate
 ## Import
 
 ```js
-import { Component1, Component2 } from "react-native-library-boilerplate";
+import InfoCard from "@paraboly/react-native-info-card";
 ```
 
 ## Component1 Usage
 
 ```js
-<Component1 />
+<InfoCard />
 ```
-
-# Configuration - Props
-
-| Property |  Type   | Default | Description                                             |
-| -------- | :-----: | :-----: | ------------------------------------------------------- |
-| outline  | boolean |  true   | make the button outline                                 |
-| solid    | boolean |  false  | make the button with a solid background and a shadow    |
-| gradient | boolean |  false  | make the button with a gradient background and a shadow |
-| width    | number  |   150   | change the button's width                               |
 
 ## Future Plans
 
@@ -69,7 +58,7 @@ Change log will be here !
 
 ## Author
 
-FreakyCoder, kurayogun@gmail.com
+Sevval Eygul, sevvalleygull@gmail.com
 
 ## License
 

@@ -1,12 +1,14 @@
 {
-  "name": "react-native-library-boilerplate",
-  "version": "0.0.2",
-  "description": "Description for library",
+  "name": "@paraboly/react-native-info-card",
+  "version": "0.0.1",
+  "description": "Fully customizable info card for React Native via Paraboly",
   "keywords": [
     "FreakyCoder",
     "freakycoder",
     "kuray",
     "Kuray",
+    "SevvalEygul",
+    "Sevval",
     "react",
     "react-native",
     "javascript",
