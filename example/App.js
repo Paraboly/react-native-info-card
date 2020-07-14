@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
-
+import {SafeAreaView, View} from 'react-native';
 import InfoCard from './lib/src/InfoCard';
 
 const App = () => {
@@ -16,8 +8,8 @@ const App = () => {
       <SafeAreaView
         style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <InfoCard
+          title="info card"
           height={85}
-          descriptionDisable
           statusColor="purple"
           borderColor="blue"
           statusText="Suspended"></InfoCard>

@@ -60,6 +60,7 @@ export default {
     flexDirection: 'row',
   },
   textContainer: {
+    height: 30,
     width: '85%',
     flexDirection: 'column',
   },
@@ -84,31 +85,12 @@ export default {
   },
 
   statusContainer: {
-    left: 12,
     height: 50,
     width: 125,
-    bottom: 24,
     marginLeft: 'auto',
   },
   statusTextStyle: {
     color: '#fff',
     fontWeight: 'bold',
-  },
-  topButtonStyle: {
-    width: 45,
-    height: 30,
-    alignItems: 'center',
-    marginLeft: 'auto',
-    justifyContent: 'center',
-    borderTopRightRadius: 16,
-    backgroundColor: '#f4cb61',
-    borderBottomLeftRadius: 16,
-    shadowRadius: 5,
-    shadowOpacity: 0.3,
-    shadowColor: '#757575',
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
   },
 };

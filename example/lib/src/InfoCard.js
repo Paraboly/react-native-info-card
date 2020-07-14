@@ -17,9 +17,6 @@ const InfoCard = (props) => {
     height,
     source,
     onPress,
-    iconName,
-    iconType,
-    iconColor,
     imageStyle,
     statusText,
     fontFamily,
@@ -32,14 +29,10 @@ const InfoCard = (props) => {
     borderRadius,
     descTextStyle,
     titleTextStyle,
-    topButtonStyle,
     statusContainer,
     borderLeftWidth,
     backgroundColor,
     statusTextStyle,
-    onPressTopButton,
-    disableTopButton,
-    topButtonComponent,
     descriptionDisable,
   } = props;
   return (
@@ -74,9 +67,8 @@ const InfoCard = (props) => {
                       titleTextStyle || styles.titleTextStyle,
                       {fontFamily},
                     ]}>
-                    header
+                    {title}
                   </Text>
-
                   {!descriptionDisable && (
                     <Text
                       style={[
@@ -84,15 +76,12 @@ const InfoCard = (props) => {
                         {fontFamily},
                       ]}
                       numberOfLines={2}>
-                      description
+                      {description}
                     </Text>
                   )}
                 </View>
               </View>
               <View style={_footerContainer(descriptionDisable)}>
-                <View style={{flexDirection: 'row'}}>
-                  <Text>footer</Text>
-                </View>
                 <View style={statusContainer || styles.statusContainer}>
                   <View style={statusStyle || _statusStyle(statusColor)}>
                     <Text
@@ -100,7 +89,7 @@ const InfoCard = (props) => {
                         statusTextStyle || styles.statusTextStyle,
                         {fontFamily},
                       ]}>
-                      Status
+                      {statusText}
                     </Text>
                   </View>
                 </View>
@@ -116,14 +105,12 @@ const InfoCard = (props) => {
 InfoCard.propTypes = {
   title: PropTypes.string,
   dateText: PropTypes.string,
-  iconColor: PropTypes.string,
   dateTitle: PropTypes.string,
   statusText: PropTypes.string,
   shadowColor: PropTypes.string,
   description: PropTypes.string,
   statusColor: PropTypes.string,
   borderRadius: PropTypes.number,
-  disableTopButton: PropTypes.bool,
   backgroundColor: PropTypes.string,
   borderLeftWidth: PropTypes.number,
   descriptionDisable: PropTypes.bool,
@@ -147,8 +134,5 @@ InfoCard.defaultProps = {
   source: {uri: 'https://image.flaticon.com/icons/png/256/2240/2240692.png'},
   description:
     'Morbi fringilla nisl vel lacus varius maximus. Etiam et mauris tortor. Sed et mauris non neque luctus tempus.',
-  iconName: 'navigation',
-  iconColor: '#fdfdfd',
-  iconType: 'Feather',
 };
 export default InfoCard;
