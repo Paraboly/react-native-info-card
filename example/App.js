@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, View} from 'react-native';
-import InfoCard from './lib/src/InfoCard';
+import InfoCard from '@paraboly/react-native-info-card';
 
 const App = () => {
   return (

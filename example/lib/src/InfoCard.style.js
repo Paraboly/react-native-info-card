@@ -64,11 +64,6 @@ export default {
     width: '85%',
     flexDirection: 'column',
   },
-  imageStyle: {
-    top: 20,
-    width: 30,
-    height: 30,
-  },
   titleTextStyle: {
     left: 20,
     width: '90%',

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, Image, Dimensions} from 'react-native';
+import {View, Text, TouchableOpacity, Dimensions} from 'react-native';
 import styles, {
   container,
   _shadowStyle,
@@ -7,6 +7,7 @@ import styles, {
   _statusStyle,
 } from './InfoCard.style';
 import PropTypes from 'prop-types';
+import Svg, {Image as Imagesvg} from 'react-native-svg';
 import Androw from 'react-native-androw';
 const {width: ScreenWidth} = Dimensions.get('window');
 
@@ -17,7 +18,6 @@ const InfoCard = (props) => {
     height,
     source,
     onPress,
-    imageStyle,
     statusText,
     fontFamily,
     shadowStyle,
@@ -34,6 +34,8 @@ const InfoCard = (props) => {
     backgroundColor,
     statusTextStyle,
     descriptionDisable,
+    imageWidth,
+    imageHeight,
   } = props;
   return (
     <Androw style={shadowStyle || _shadowStyle(shadowColor)}>
@@ -55,11 +57,19 @@ const InfoCard = (props) => {
           <View style={styles.staticContainer}>
             <View style={styles.staticContainerGlue}>
               <View style={styles.headerContainer}>
-                <Image
-                  resizeMode="cover"
-                  style={imageStyle || styles.imageStyle}
-                  source={source}
-                />
+                <View
+                  style={{
+                    top: 20,
+                    justifyContent: 'center',
+                  }}>
+                  <Svg width={imageWidth} height={imageHeight}>
+                    <Imagesvg
+                      href={source}
+                      width={imageWidth}
+                      height={imageHeight}
+                    />
+                  </Svg>
+                </View>
                 <View style={styles.textContainer}>
                   <Text
                     numberOfLines={1}
@@ -117,6 +127,8 @@ InfoCard.propTypes = {
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   borderColor: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  imageWidth: PropTypes.number,
+  imageHeight: PropTypes.number,
 };
 
 InfoCard.defaultProps = {
@@ -134,5 +146,8 @@ InfoCard.defaultProps = {
   source: {uri: 'https://image.flaticon.com/icons/png/256/2240/2240692.png'},
   description:
     'Morbi fringilla nisl vel lacus varius maximus. Etiam et mauris tortor. Sed et mauris non neque luctus tempus.',
+
+  imageHeight: 40,
+  imageWidth: 40,
 };
 export default InfoCard;
