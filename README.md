@@ -31,6 +31,7 @@ npm i @paraboly/react-native-info-card
 "react": ">= 16.x.x",
 "react-native": ">= 0.55.x",
 "react-native-androw": ">= 0.0.34",
+"react-native-svg": ">= 12.1.0"
 ```
 
 # Usage
